@@ -14,12 +14,11 @@ public class Endereco {
 	@Id
 	private String cep;
 	private String logradouro;
+	@ManyToOne
 	private TipoLogradouro tipoLogradouro;
 	@ManyToOne
 	@JoinColumn(name="idBairro")
 	private Bairro bairro;
-	
-
 	public String getCep() {
 		return cep;
 	}
@@ -44,6 +43,10 @@ public class Endereco {
 	public void setBairro(Bairro bairro) {
 		this.bairro = bairro;
 	}
+	
+	
+
+	
 	
 	
 }

@@ -36,17 +36,23 @@ public class TesteInsercao {
 		Bairro bairro2 = new Bairro();
 		bairro2.setNome("Paraisópolis");
 		bairro2.setCidade(cidade2);
+		
+		TipoLogradouro tipoLogradouro = new TipoLogradouro();
+		tipoLogradouro.setTipoLogradouro("Avenida");
+		
+		TipoLogradouro tipoLogradouro2 = new TipoLogradouro();
+		tipoLogradouro2.setTipoLogradouro("rua");
 
 		Endereco endereco = new Endereco();
 		endereco.setCep("45003-008");
 		endereco.setLogradouro("Luis Eduardo Magalhaes");
-		endereco.setTipoLogradouro(TipoLogradouro.Avenida);
+		endereco.setTipoLogradouro(tipoLogradouro);
 		endereco.setBairro(bairro);
 		
 		Endereco endereco2 = new Endereco();
 		endereco2.setCep("88888-003");
 		endereco2.setLogradouro("Rua da ladeira");
-		endereco2.setTipoLogradouro(TipoLogradouro.Rua);
+		endereco2.setTipoLogradouro(tipoLogradouro2);
 		endereco2.setBairro(bairro2);
 		
 		EstadoDao dao = new EstadoDao();

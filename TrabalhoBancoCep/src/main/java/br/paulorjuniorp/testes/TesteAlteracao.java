@@ -15,19 +15,16 @@ public class TesteAlteracao {
 		
 		EstadoDao dao = new EstadoDao();
 
-		//Passando a uf do estado que vai ser alterado
 		Estado estado = dao.porUf("BA");
 		
 		System.out.println("Nome antes = " + estado.getNome());
 		
-		//Alterando o nome
 		estado.setNome("Baía");
 		
 		dao.altera(estado);
 		
 		CidadeDao dao1 = new CidadeDao();
 		
-		//Passando o id da cidade e depois o bairro e endereço que vai ter o nome alterado
 		
 		Cidade cidade = dao1.porId((long) 1);
 		
